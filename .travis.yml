@@ -1,12 +1,8 @@
 language: ruby
-branches:
-  only:
-    - ps1
 sudo: required
 services:
   - docker
 before_script:
-  - if [[ "$TRAVIS_BRANCH" == "ps1" ]]; then cd PS/ps1; fi
   - docker-compose -f docker-compose.yml up --build -d
   - docker-compose -f docker-compose.yml run -d web zeus start
 script:
