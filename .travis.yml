@@ -3,6 +3,7 @@ sudo: required
 services:
   - docker
 before_script:
+  - cd ps1
   - docker-compose -f docker-compose.yml up --build -d
   - docker-compose -f docker-compose.yml run -d web zeus start
 script:
