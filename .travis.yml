@@ -5,12 +5,6 @@ branches:
 sudo: required
 services:
   - docker
-env:
-  matrix:
-  - global:
-    - DOCKER_COMPOSE_VERSION: 2
-    - REPO=ReshmaDangol/travis-first-attempt
-    - COMMIT=${TRAVIS_COMMIT::8}
 before_script:
   - if [[ "$TRAVIS_BRANCH" == "ps1" ]]; then cd PS/ps1; fi
   - docker-compose -f docker-compose.yml up --build -d
