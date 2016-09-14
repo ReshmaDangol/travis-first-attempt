@@ -23,4 +23,3 @@ script:
   - haml-lint app/views/
   - rails test
   - rails cucumber	
-	
