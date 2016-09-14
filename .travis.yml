@@ -9,7 +9,7 @@ env:
   matrix:
   - global:
     - DOCKER_COMPOSE_VERSION: 2
-    - REPO=mrteera/web16-06
+    - REPO=ReshmaDangol/travis-first-attempt
     - COMMIT=${TRAVIS_COMMIT::8}
 before_script:
   - if [[ "$TRAVIS_BRANCH" == "ps1" ]]; then cd PS/ps1; fi
